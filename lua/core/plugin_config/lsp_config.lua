@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "sumneko_lua", "clangd", "pyright", "gopls" }
+  ensure_installed = {"clangd", "pyright", "gopls" }
 })
 
 local on_attach = function(_, _)
@@ -9,11 +9,6 @@ local on_attach = function(_, _)
 end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-require("lspconfig").sumneko_lua.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
 
 require("lspconfig").clangd.setup {
   on_attach = on_attach,
