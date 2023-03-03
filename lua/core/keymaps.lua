@@ -15,3 +15,4 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.keymap.set('n', '<c-h>', ':nohlsearch<CR>')
+
